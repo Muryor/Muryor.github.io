@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<title>天翼云直链解析 - 涟漪</title>
+	<meta content="webkit" name="renderer">
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+	<meta name="referrer" content="never">
+	<link href="https://www.layuicdn.com/layui/css/layui.css" media="all" rel="stylesheet">
+	<link href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<style type="text/css">
+		html,
+		body {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+
+		.layui-form .layui-form-item:last-child {
+			margin-bottom: 0;
+		}
+
+		.layui-form-label.required:before {
+			display: inline-block;
+			margin-right: 4px;
+			content: "*";
+			font-family: SimSun;
+			line-height: 1;
+			font-size: 13px;
+			color: #f5222d;
+		}
+
+		#login .layui-form-item {
+			position: relative;
+		}
+
+		#login .layui-form-item label {
+			position: absolute;
+			left: 1px;
+			top: 1px;
+			width: 38px;
+			line-height: 36px;
+			text-align: center;
+			color: #d2d2d2;
+		}
+
+		#login .layui-form-item input {
+			padding-left: 36px;
+		}
+
+		#login .code-item {
+			display: flex;
+			align-items: center;
+			width: 208px;
+		}
+
+		#login .code-img>img {
+			width: 90px;
+			height: 36px;
+			margin-left: 5px;
+			border: 1px solid #666;
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="layui-container">
+		<blockquote class="layui-elem-quote">
+			<span class="layui-breadcrumb" style="visibility: visible; display: flex;" id="nav">
+			<a><cite>根目录</cite></a>
+		</span>
+		</blockquote>
+		<table class="layui-table layui-hide" id="list" lay-filter="list"></table>
+	</div>
+	<div class="layui-form layui-form-pane" id="tianyi" lay-filter="tianyi" style="display: none; padding: 20px;">
+		<div class="layui-form-item layui-form-text">
+			<label class="layui-form-label required">分享链接或id</label>
+			<div class="layui-input-block">
+				<textarea placeholder="如：&#10;https://cloud.189.cn/t/Rn6bMrqYv6Rj&#10;或&#10;Rn6bMrqYv6Rj" name="shareCode" maxlength="50" class="layui-textarea"></textarea>
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">访问密码</label>
+			<div class="layui-input-block">
+				<input type="text" name="accessCode" maxlength="4" autocomplete="off" placeholder="无密码可不填" class="layui-input">
+			</div>
+		</div>
+		<div class="layui-form-item layui-form-text">
+			<label class="layui-form-label">accessToken (解决限速)</label>
+			<div class="layui-input-block">
+				<textarea placeholder="https://h5.cloud.189.cn h5登录抓包获取或点击下方按钮获取" name="accessToken" maxlength="32" class="layui-textarea"></textarea>
+			</div>
+			<div class="layui-form-mid layui-word-aux">
+				<button class="layui-btn layui-btn-xs" id="getAccessToken">获取accessToken</button>
+			</div>
+		</div>
+	</div>
+	<script src="https://www.layuicdn.com/layui/layui.js"></script>
+	<script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/clipboard.js/2.0.10/clipboard.min.js"></script>
+	<script src="https://gitee.com/Muryor/blog/raw/master/index.js"></script>
+</body>
+
+</html>

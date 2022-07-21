@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Github to JSDelivr</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport' />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="//www.google.com/s2/favicons?domain=https://www.jsdelivr.com">
+    <style type="text/css">
+        .intro {
+            margin: .5em 0;
+        }
+
+        .jsDelivr,
+        .ex,
+        .main {
+            margin: 1em 0;
+        }
+
+        .jsDelivr>img {
+            margin: 0 0 10px;
+        }
+
+        .git .head {
+            display: flex;
+            align-items: center;
+            margin: 0 0 .5em;
+        }
+
+        .git .head span {
+            font-size: 1.3em;
+            font-weight: 500;
+            display: inline-block;
+            margin: 0 0 0 6px;
+        }
+
+        .ex ul li {
+            word-break: break-all;
+        }
+
+        .gitlink.invalid {
+            border-color: #ffaf86;
+            box-shadow: 0 0 0 0.2rem rgba(234, 121, 55, 0.25);
+        }
+
+        .footer {
+            padding: 1em 0;
+            border-top: 1px solid #eaeaea;
+        }
+
+        .embed-label {
+            display: inline-block;
+            margin: 10px 0;
+        }
+    </style>
+    <script async="async" src="/assests/js/analytics.js?id=UA-113310556-1"></script>
+    <script type="text/javascript">
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-113310556-1');
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-xl-12 col-sm-12 col-md-12">
+                <div class="head">
+                    <h1 class="text-center intro">Migrating from GitHub to jsDelivr</h1>
+                    <p class="text-center">
+                        <legend>jsDelivr is a free, fast, and reliable Open Source CDN for npm and GitHub.
+                            Most GitHub links can be easily converted to jsDelivr links.</legend>
+                    </p>
+                </div>
+                <div class="main">
+                    <div class="git">
+                        <div class="head">
+                            <img src="https://npm.elemecdn.com/muryor-back_up@latest/medias/img/20210401163647.png" width="25"
+                                height="25"> <span>Github</span>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-lg-12 col-xl-12 col-sm-12 col-md-12">
+                                <input type="text" class="form-control gitlink" id="g" placeholder="Github file URL">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jsDelivr">
+                        <img src="//i.imgur.com/drtug7D.png">
+                        <div class="form-group row">
+                            <div class="col-lg-12 col-xl-12 col-sm-12 col-md-12">
+                                <div class="row">
+                                    <div class="col-lg-10 col-xl-10 col-sm-10 col-md-10">
+                                        <input type="text" class="form-control" id="o"
+                                            placeholder="Direct link with lastest commit (long hash)" readonly="">
+                                    </div>
+                                    <div class="col-lg-2 col-xl-2 col-sm-2 col-md-2">
+                                        <button class="btn btn-success" id="c1">COPY</button>
+                                        <button class="btn btn-primary" id="t1">TEST</button>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-lg-10 col-xl-10 col-sm-10 col-md-10">
+                                        <input type="text" class="form-control" id="r"
+                                            placeholder="Direct link with lastest commit (short hash)" readonly="">
+                                    </div>
+                                    <div class="col-lg-2 col-xl-2 col-sm-2 col-md-2">
+                                        <button class="btn btn-success" id="c2">COPY</button>
+                                        <button class="btn btn-primary" id="t2">TEST</button>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-lg-10 col-xl-10 col-sm-10 col-md-10">
+                                        <input type="text" class="form-control" id="m"
+                                            placeholder="Direct link without lastest commit" readonly="">
+                                    </div>
+                                    <div class="col-lg-2 col-xl-2 col-sm-2 col-md-2">
+                                        <button class="btn btn-success" id="c3">COPY</button>
+                                        <button class="btn btn-primary" id="t3">TEST</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="embed">
+                        <span class="embed-label"><strong>Embedded code</strong></span>
+                        <div class="form-group row">
+                            <div class="col-lg-12 col-xl-12 col-sm-12 col-md-12">
+                                <div class="row">
+                                    <div class="col-lg-10 col-xl-10 col-sm-10 col-md-10">
+                                        <input type="text" class="form-control" id="n"
+                                            placeholder="Embedded code with lastest commit (long hash)" readonly="">
+                                    </div>
+                                    <div class="col-lg-2 col-xl-2 col-sm-2 col-md-2">
+                                        <button class="btn btn-success" id="c4">COPY</button>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-lg-10 col-xl-10 col-sm-10 col-md-10">
+                                        <input type="text" class="form-control" id="t"
+                                            placeholder="Embedded code with lastest commit (short hash)" readonly="">
+                                    </div>
+                                    <div class="col-lg-2 col-xl-2 col-sm-2 col-md-2">
+                                        <button class="btn btn-success" id="c5">COPY</button>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-lg-10 col-xl-10 col-sm-10 col-md-10">
+                                        <input type="text" class="form-control" id="p"
+                                            placeholder="Embedded code without lastest commit" readonly="">
+                                    </div>
+                                    <div class="col-lg-2 col-xl-2 col-sm-2 col-md-2">
+                                        <button class="btn btn-success" id="c6">COPY</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btngroup">
+                    <button class="btn btn-danger" id="x">RESET</button>
+                </div>
+                <div class="ex">
+                    <h5>Valid URL</h5>
+                    <ul>
+                        <li>Github file URL:
+                            <b>https://github.com/twbs/bootstrap/blob/v4-dev/dist/css/bootstrap.min.css</b>
+                        </li>
+                        <li>Github file URL:
+                            <b>https://github.com/twbs/bootstrap/raw/v4-dev/dist/css/bootstrap.min.css</b>
+                        </li>
+                        <li>Github file URL:
+                            <b>https://github.com/twbs/bootstrap/blame/v4-dev/dist/css/bootstrap.min.css</b>
+                        </li>
+                        <li>Github raw file URL:
+                            <b>https://raw.githubusercontent.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.min.css</b>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer text-center">
+                    @ <span class="year"></span> by Hung1001
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        const giturl = /^https?:\/\/github\.com\/(.+?)\/(.+?)\/(?!releases\/)(?:(?:blob|raw|blame)\/)?(.+?)\/(.+)/i,
+            rawgit = /^https?:\/\/raw\.github(?:usercontent)?\.com\/(.+?)\/(.+?)\/(.+?)\/(.+)/i;
+        (function (doc) {
+            doc.getElementsByClassName("gitlink")[0].focus();
+            doc.getElementsByClassName("year")[0].innerHTML = new Date().getFullYear();
+
+            var a = () => {
+                let t = doc.getElementsByClassName("gitlink")[0].value;
+                let y = t.match(giturl),
+                    l = t.match(rawgit);
+
+                var n = (e, i) => {
+                    doc.getElementsByClassName("gitlink")[0].classList.remove("invalid");
+                    let n = `https://api.github.com/repos/${i[1]}/${i[2]}/commits/${i[3]}`;
+                    fetch(n)
+                        .then(r => r.json())
+                        .then(i => {
+                            let n = i.sha,
+                                c = t.replace(e, `https://cdn.jsdelivr.net/gh/$1/$2@${n}/$4`),
+                                d = t.replace(e, `https://cdn.jsdelivr.net/gh/$1/$2/$4`),
+                                k = t.replace(e,
+                                    `https://cdn.jsdelivr.net/gh/$1/$2@${n.substring(0,7)}/$4`),
+                                q = t.split("/").pop();
+                            doc.getElementById("o").value = c;
+                            doc.getElementById("m").value = d;
+                            doc.getElementById("r").value = k;
+                            if (q.indexOf(".js") != -1) {
+                                doc.getElementById("n").value =
+                                    `<script src="${c}" type="text/javascript"><\/script>`;
+                                doc.getElementById("p").value =
+                                    `<script src="${d}" type="text/javascript"><\/script>`;
+                                doc.getElementById("t").value =
+                                    `<script src="${k}" type="text/javascript"><\/script>`;
+                            };
+                            if (q.indexOf(".css") != -1) {
+                                doc.getElementById("n").value =
+                                    `<link href="${c}" rel="stylesheet" type="text/css"/>`;
+                                doc.getElementById("p").value =
+                                    `<link href="${d}" rel="stylesheet" type="text/css"/>`;
+                                doc.getElementById("t").value =
+                                    `<link href="${k}" rel="stylesheet" type="text/css"/>`;
+                            };
+                            if (q.indexOf(".png") != -1 || q.indexOf(".jpg") != -1 || q.indexOf(
+                                    ".gif") != -1 || q.indexOf(".svg") != -1 || q.indexOf(".jpeg") != -
+                                1) {
+                                doc.getElementById("n").value = `<img src="${c}">`;
+                                doc.getElementById("p").value = `<img src="${d}">`;
+                                doc.getElementById("t").value = `<img src="${k}">`;
+                            };
+                        })
+                        .catch(e => console.error(e))
+                }
+                giturl.test(t) ? n(giturl, y) : rawgit.test(t) ? n(rawgit, l) : doc.getElementsByClassName(
+                    "gitlink")[0].classList.add("invalid")
+            }
+
+            var b = id => {
+                doc.getElementById(id).value.length > 0 ? (doc.getElementById(id).select(), doc.execCommand(
+                    "copy")) : alert("Nothing to copy !")
+            }
+
+            var c = id => {
+                doc.getElementById(id).value.length > 0 ? window.open(doc.getElementById(id).value) : (alert(
+                    "Nothing to test !"))
+            }
+            doc.getElementById("x").addEventListener("click", () => {
+                doc.getElementById("g").focus();
+                let a = doc.querySelectorAll("#g,#o,#m,#n,#p,#t,#r");
+                for (let i = 0; i < a.length; i++) {
+                    a[i].value = "";
+                };
+            })
+            doc.getElementById("c1").addEventListener("click", () => {
+                b("o");
+            })
+            doc.getElementById("c2").addEventListener("click", () => {
+                b("r");
+            })
+            doc.getElementById("c3").addEventListener("click", () => {
+                b("m");
+            })
+            doc.getElementById("c4").addEventListener("click", () => {
+                b("n");
+            })
+            doc.getElementById("c5").addEventListener("click", () => {
+                b("t");
+            })
+            doc.getElementById("c6").addEventListener("click", () => {
+                b("p");
+            })
+            doc.getElementById("t1").addEventListener("click", () => {
+                c("o");
+            })
+            doc.getElementById("t2").addEventListener("click", () => {
+                c("r");
+            })
+            doc.getElementById("t3").addEventListener("click", () => {
+                c("m");
+            })
+            doc.getElementById("g").addEventListener("input", a)
+        })(document);
+    </script>
+</body>
+
+</html>
